@@ -73,6 +73,36 @@ This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library wi
 - [Becoming a subscriber on Tidelift](https://tidelift.com/subscription/npm/vuetify)
 - [Making a one-time donation with Paypal](https://paypal.me/vuetify)
 
+## 🚀 Deployment to GitHub Pages
+
+This project is configured with GitHub Actions to automatically deploy to GitHub Pages whenever changes are pushed to the main branch.
+
+### Automatic Deployment
+
+The deployment happens automatically when:
+- Code is pushed to the `main` branch
+- The GitHub Actions workflow builds the project with the correct base URL for your repository
+- The built files are deployed to GitHub Pages
+
+### Manual Configuration
+
+If you need to deploy manually or configure the base URL differently:
+
+```bash
+# Build for GitHub Pages with custom base URL
+NODE_ENV=production VITE_BASE_URL=/your-repo-name/ npm run build
+```
+
+The base URL is automatically set based on your repository name during GitHub Actions deployment, so no manual configuration is required for most use cases.
+
+### GitHub Pages Setup
+
+To enable GitHub Pages:
+1. Go to your repository's Settings
+2. Navigate to Pages in the left sidebar
+3. Under "Source", select "GitHub Actions"
+4. The site will be available at `https://yourusername.github.io/your-repo-name/`
+
 ## 📑 License
 [MIT](http://opensource.org/licenses/MIT)
 
