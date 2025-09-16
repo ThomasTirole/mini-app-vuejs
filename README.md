@@ -81,6 +81,7 @@ This project is configured with GitHub Actions to automatically deploy to GitHub
 
 The deployment happens automatically when:
 - Code is pushed to the `main` branch
+- Pull requests are opened (for testing the workflow)
 - The GitHub Actions workflow builds the project with the correct base URL for your repository
 - The built files are deployed to GitHub Pages
 
